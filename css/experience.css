@@ -1,0 +1,229 @@
+/* ============================================
+   EXPERIENCE PAGE STYLES
+   ============================================ */
+
+.page-header {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface-warm) 100%);
+    text-align: center;
+}
+
+.page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.experience-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--background);
+}
+
+.experience-card {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-3xl);
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface-warm) 100%);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.experience-meta {
+    flex: 1;
+}
+
+.experience-title {
+    font-size: var(--font-size-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.company-name {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.experience-period {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.company-icon {
+    font-size: 4rem;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.experience-content {
+    padding: var(--spacing-xl);
+}
+
+.section-heading {
+    font-size: var(--font-size-md);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.section-heading::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background-color: var(--primary-color);
+    margin-right: var(--spacing-sm);
+    border-radius: 2px;
+}
+
+.challenge-section,
+.approach-section,
+.impact-section,
+.skills-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.challenge-section p,
+.approach-section p {
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.impact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.impact-list li {
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+}
+
+.impact-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: var(--font-size-md);
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.skill-tag {
+    background-color: rgba(13, 148, 136, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    border: 1px solid var(--primary-light);
+}
+
+.experience-cta {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    text-align: center;
+}
+
+.experience-cta .cta-title {
+    font-size: var(--font-size-2xl);
+    color: white;
+    margin-bottom: var(--spacing-xl);
+}
+
+.experience-cta .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience-cta .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.experience-cta .btn-primary:hover {
+    background-color: var(--surface-light);
+}
+
+.experience-cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.experience-cta .btn-secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .company-icon {
+        font-size: 3rem;
+    }
+
+    .experience-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .company-name {
+        font-size: var(--font-size-md);
+    }
+
+    .experience-content {
+        padding: var(--spacing-md);
+    }
+
+    .experience-cta .cta-buttons {
+        flex-direction: column;
+    }
+
+    .experience-cta .btn {
+        width: 100%;
+    }
+}

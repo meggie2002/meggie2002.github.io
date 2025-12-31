@@ -1,0 +1,212 @@
+/* ============================================
+   PROJECTS PAGE STYLES
+   ============================================ */
+
+.filters-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--surface-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.filters-wrapper {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.filter-group label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.filter-select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    background-color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 200px;
+}
+
+.filter-select:hover {
+    border-color: var(--primary-color);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--hover-shadow);
+}
+
+.projects-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--background);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px var(--hover-shadow);
+    border-color: var(--primary-color);
+}
+
+.project-image {
+    background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface-warm) 100%);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon {
+    font-size: 5rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.project-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.project-description {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-sm {
+    padding: 0.625rem 1.5rem;
+    font-size: var(--font-size-xs);
+}
+
+.projects-cta {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    text-align: center;
+}
+
+.projects-cta .cta-title {
+    font-size: var(--font-size-2xl);
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.projects-cta .cta-subtitle {
+    font-size: var(--font-size-md);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+}
+
+.projects-cta .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects-cta .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.projects-cta .btn-primary:hover {
+    background-color: var(--surface-light);
+}
+
+.projects-cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.projects-cta .btn-secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-select {
+        min-width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        min-height: 150px;
+        padding: var(--spacing-xl);
+    }
+
+    .project-icon {
+        font-size: 4rem;
+    }
+
+    .projects-cta .cta-buttons {
+        flex-direction: column;
+    }
+
+    .projects-cta .btn {
+        width: 100%;
+    }
+}
